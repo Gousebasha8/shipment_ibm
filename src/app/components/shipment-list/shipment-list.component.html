@@ -1,0 +1,36 @@
+<h1>Shipment search Result</h1>
+
+
+
+
+<div class="container" *ngFor="let Item of ShipmentData">
+  <div class="row">
+    <div class="col-sm">
+      <p>
+        {{Item.OrderNo}}<br>
+        carrierNo.{{Item.ScacAndService}}<br>
+        <!-- shipment#<a href="{{Item.ShipmentNo}}">{{Item.ShipmentNo}}</a> -->
+        <a routerLink="/shipmentNO/{{Item.ShipmentNo}}"  routrLinkActivate="active-link" class="list">{{Item.ShipmentNo}}</a>
+  
+
+      </p>
+    </div>
+    <div class="col-sm">
+<p>
+      {{Item.Status}}<br>
+      AssignedTo: {{Item.AssignedToUserId}}<br>
+      Expected pickup date:{{Item. ExpectedShipmentDate}}
+    </p>
+      <br>
+    </div>
+    <div class="col-sm">
+      customerInfo <br>
+
+      {{Item.BillToAddress.FirstName}}
+      {{Item.BillToAddress.LastName}} <br>
+      {{Item.BillToAddress.DayPhone}}<br>
+      {{Item.BillToAddress.EMailID}}
+
+    </div>
+  </div>
+</div>

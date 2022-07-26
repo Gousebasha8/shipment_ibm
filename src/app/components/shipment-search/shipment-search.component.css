@@ -1,0 +1,34 @@
+.formsearch{
+    /* width: 500px;
+    height: 400px; */
+    text-align: center;
+}
+.form-group{
+    /* width: 500px; */
+}
+.card{
+    text-align: center;
+    /* box-shadow: 0 0 5px 0 rgba(22, 22, 26, .25); */
+
+}
+.container{
+    text-align: center;
+     box-shadow: 0 0 5px 0 rgba(22, 22, 26, .25);
+     margin-top: 20px;
+     width: 450px;
+     height: 468px;
+   
+
+}
+
+.btn{
+    margin: 3px;
+    display: inline-block;
+    padding: 0.610rem 1.875rem;
+   
+}
+.container h1{
+    padding: 20px;
+    font-size: 25px
+
+}
