@@ -6,3 +6,7 @@
     /* padding-right: 3rem; */
     /* font-size: 15px; */
  } 
+ button{
+    float:right;
+    font-size: small;
+ }
