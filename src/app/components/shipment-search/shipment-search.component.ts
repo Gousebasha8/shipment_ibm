@@ -14,7 +14,6 @@ export class ShipmentSearchComponent implements OnInit {
     this.router.navigate(['shipmetListResult']);
     
   }
-  
 
   ngOnInit(): void {
   }
