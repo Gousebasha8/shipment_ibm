@@ -1,4 +1,11 @@
-<h1>Shipment search Result</h1>
+<mat-card class="wel">
+  welcome to shipment list
+</mat-card>
+
+
+
+
+
 
 
 <!-- {{arrays}} -->
@@ -9,42 +16,49 @@
     </li>
   </ul>
 </div> -->
+<div style="float: right; margin-right: 50px;">
 
-  
-<div style="float: right; margin-right: 25px;">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<p>
-  <a class="btn btn-info btn-lg">
-    <span class="glyphicon glyphicon-filter"></span>x
+<button class="btn " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  filter
+</button>
+  <!-- <div class="dropdown">
+    <button class="btn btn-primary " type="button" data-toggle="dropdown-menu"><i class="fa fa-filter" aria-hidden="true"></i>
+      <span class="caret"></span></button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a class="dropdown-item" href="#">HTML</a></li>
+      <li><a class="dropdown-item" href="#">CSS</a></li>
+      <li><a class="dropdown-item" href="#">JavaScript</a></li>
+      <li><a class="dropdown-item" href="#">jQuery</a></li>
+      <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+      <li><a class="dropdown-item" href="#">Angular</a></li>
+    </ul>
+  </div> -->
+  <div class="collapse" id="collapseExample">
+    <ul>
+      <li *ngFor ="let items of ShipmentData">
+        <!-- <input type="checkbox" value={{items.OrderNo}} (change)="onChange($event)">{{items.OrderNo}} -->
+        <input type="checkbox" value={{items.Status}} (change)="onChange($event)">{{items.Status}}
+      </li>
+      <!-- <li><input class="dropdown-item" type="checkbox" value="" href="#">Ready for Backroom Pick</li>
+        <li><input class="dropdown-item" type="checkbox" href="#">Cancelled</li> -->
+        <!-- <li><input class="dropdown-item" type="checkbox" href="#">JavaScript</li>
+        <li><input class="dropdown-item" type="checkbox" href="#">jQuery</li>
+        <li><input class="dropdown-item" type="checkbox" href="#">Bootstrap</li>
+        <li><input class="dropdown-item" type="checkbox" href="#">Angular</li> -->
+    </ul>
+  </div>
     
-
-  </a>
-</p> 
-  <ul> 
-    <li *ngFor ="let items of ShipmentData">
-      
-      <input type="checkbox" value={{items.Status}} (change)="onChange($event)">{{items.Status}}
-    </li>
-  </ul>
+  </div>
   
-</div>
-   
 
-
-
-
-<div class="container" *ngFor="let Item of productArray  || ShipmentData">
+<div class="container"  *ngFor="let Item of productArray  || ShipmentData">
   <div class="row">
     <div class="col-sm">
       <p>
         {{Item.OrderNo}}<br>
         carrierNo.{{Item.ScacAndService}}<br>
-         <!--shipment#<a href="{{Item.ShipmentNo}}">{{Item.ShipmentNo}}</a> -->
+        <!-- shipment#<a href="{{Item.ShipmentNo}}">{{Item.ShipmentNo}}</a> -->
         <a routerLink="/shipmentNO/{{Item.ShipmentNo}}"  routrLinkActivate="active-link" class="list">{{Item.ShipmentNo}}</a>
   
 

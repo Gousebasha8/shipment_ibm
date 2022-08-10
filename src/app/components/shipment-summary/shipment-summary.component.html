@@ -1,2 +1,78 @@
-<p>shipment-summary works!</p>
+
+
+
+
+<mat-card class="wel">
+  welcome to shipment summary
+</mat-card>
+
+<div class="wh" *ngIf="ShipmentSummaryData.length!=0">
+<div class="container">
+  <div class="row">
+    <div class="col">ShipNo:{{ShipmentSummaryData.ShipmentNo}}</div>
+    <div class="col">ExpectedPickDate:{{ShipmentSummaryData.ExpectedShipmentDate}}</div>
+    <div class="w-100"></div>
+    <div class="col">
+      Customer info :
+      {{ShipmentSummaryData.ToAddress.FirstName}}<br>
+      {{ShipmentSummaryData.ToAddress.DayPhone}}<br>
+      {{ShipmentSummaryData.ToAddress.EmailID}}<br>
+      
+
+    </div>
+    <div class="col">Assigned to: {{ShipmentSummaryData.AssignedToUserId}}<br>
+    </div>
+    <div class="w-100"></div>
+
+    <div class="col">
+      ship to:
+      {{ShipmentSummaryData.ToAddress.FirstName}}<br>
+      {{ShipmentSummaryData.ToAddress.AddressID}}<br>
+      {{ShipmentSummaryData.ToAddress.State}}
+      {{ShipmentSummaryData.ToAddress.City}}
+      {{ShipmentSummaryData.ToAddress.ZipCode}}<br>
+      {{ShipmentSummaryData.ToAddress.Country}}
+     
+      
+
+    </div>
+    <div class="col">Bill To :
+       {{ShipmentSummaryData.BillToAddress.FirstName}}<br>
+       {{ShipmentSummaryData.BillToAddress.AddressID}}<br>
+       {{ShipmentSummaryData.BillToAddress.AddressLine1}}<br>
+       {{ShipmentSummaryData.BillToAddress.State}}
+       {{ShipmentSummaryData.BillToAddress.City}}
+       {{ShipmentSummaryData.BillToAddress.ZipCode}}
+       {{ShipmentSummaryData.BillToAddress.Country}}
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  
+
+
+  <ul>
+    <li *ngFor="let  item of ShipmentSummaryData.ShipmentLines.ShipmentLine">
+      <div>
+       <img src= {{item.OrderLine.ItemDetails.ImageUrl}}>
+    
+      </div>
+      
+    
+       <h5>{{item.OrderLine.ItemDetails.Description}}</h5>
+       <br>
+       <h5>ProductID : {{item.OrderLine.ItemDetails.ItemID}}</h5>
+       <h5>Quantity : {{item.Quantity}}</h5>
+ 
+    </li>
+  </ul>
+</div>
+</div>
+
+
+
+
+
 

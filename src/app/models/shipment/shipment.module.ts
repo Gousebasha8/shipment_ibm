@@ -12,12 +12,11 @@ import { ShipmentLinesModule } from '../shipmentLines/shipmentLines.module';
     CommonModule
   ]
 })
-export class ShipmentModule {
-  AssignedToUserId: number=0;
-
+export class Shipment{
+  AssignedToUserId:number=0;
   DeliveryMethod:string="";
-  ExpectedShipmentDate: string="";
-  OrderNo:string="";
+  ExpectedShipmentDate:string="";
+  OrderNo:string=""; 
   ScacAndService: string="";
   ShipNode:string="";
   ShipmentKey:string="";

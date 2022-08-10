@@ -15,3 +15,14 @@ margin: 10px;
 padding: 10px;
 
 }
+.wel{
+    text-align: center;
+    background-color: lightseagreen;
+    font-size: 20px;
+    color: white;
+}
+.btn{
+    margin-top: 20px;
+    background-color: lightcoral;
+    color: white;
+}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ShipmentModule } from '../shipment/shipment.module';
+import { Shipment } from '../shipment/shipment.module';
 
 
 
@@ -13,7 +13,7 @@ import { ShipmentModule } from '../shipment/shipment.module';
 })
 export class Shipments {
   TotalNumberOfRecords:number=0;
-  Shipment:Array<ShipmentModule>[]=[];
+  Shipment:Array<Shipment>[]=[];
   
 
  }

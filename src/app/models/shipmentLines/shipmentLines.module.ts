@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShipLineModule } from '../ship-line/ship-line.module';
+import { ShipLineModule } from '../ship-line/shipmentLine.module';
+// import { ShipLineModule } from '../ship-line/shipmentLine.module';
 
 
 
