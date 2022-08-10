@@ -12,65 +12,8 @@ import { ShipmentServicesService } from 'src/app/services/shipment-services.serv
   styleUrls: ['./shipment-list.component.css']
 })
 export class ShipmentListComponent implements OnInit {
-//   shipmentModule:Shipments=new Shipments();
-//    Shipment:Array<Shipment>=[];
-//   BillToAdress:Customer=new Customer();
-//     ShipmentData:any;
-//   // Shipment:ShipmentModule=new ShipmentModule();
 
-//   constructor(private http:HttpClient,private shipmentService:ShipmentServicesService) {
 
-//     shipmentService.getShipmentResult().subscribe(res=>{
-//       //  const res1=res.Shipment.map(data=>{
-//       //   return {
-         
-          
-         
-//       //     AssignedToUserId:
-//       //     ,description:data.forEach(data=>{
-//       //       data['Shipment'].Assigned
-//       //     }),
-//       //     images:"assets/"+data.images,
-//       // type:data.type,cuisine_name:data.cuisine_name,price:data.price,consumable:data.consumable}
-//       // })
-//       // this.menuModule=[...res1];
-//       console.log("shi",res.Shipment)
-//     this.shipmentModule=res;
-//     this.ShipmentData=this.shipmentModule.Shipment;
-//     // console.log("this",this.ShipmentData.BillToAddress.DayPhone);
-    
-//         this.shipmentModule.Shipment=[...res.Shipment]
-
-        
-
-     
-//         console.log("carts",this.shipmentModule.Shipment);
-//         console.log("shipmentmodule",this.shipmentModule);
-       
-        
-//         this.getData();
-//      })
-    
-     
-     
-//    }
-   
-   
-   
-   
-
-//   ngOnInit(): void {
-//   }
-//   getData(){
-//     console.log("outside",this.shipmentModule);
-    
-//   }
-  
-
-// }
-// // function AssignedToUserId(AssignedToUserId: any): number {
-// //   throw new Error('Function not implemented.');
-// // }
 
 shipmentModule: Shipments = new Shipments();
 Shipment: Array<Shipment> = [];
@@ -80,26 +23,14 @@ ShipmentData: any;
 
 
 
-// Shipment:ShipmentModule=new ShipmentModule();
+
 
 constructor(private http: HttpClient, private shipmentService: ShipmentServicesService) {
 
 
 
   shipmentService.getShipmentResult().subscribe(res => {
-    //  const res1=res.Shipment.map(data=>{
-    //   return {
-
-
-
-    //     AssignedToUserId:
-    //     ,description:data.forEach(data=>{
-    //       data['Shipment'].Assigned
-    //     }),
-    //     images:"assets/"+data.images,
-    // type:data.type,cuisine_name:data.cuisine_name,price:data.price,consumable:data.consumable}
-    // })
-    // this.menuModule=[...res1];
+    
     console.log("shi", res.Shipment)
     this.shipmentModule = res;
     this.ShipmentData = this.shipmentModule.Shipment;
@@ -114,19 +45,7 @@ constructor(private http: HttpClient, private shipmentService: ShipmentServicesS
     //  console.log("ShipmentData-",this.ShipmentData[0].OrderNo)
 
   });
-  // shipmentService.getdata().subscribe(res => {
-  //   let val = res;
-  //   console.log("Shipment....Once Again", val);
-  //   // this.arrays = JSON.stringify(res);
-  //   // this.arrays =JSON.parse(res);
-  //   // console.log("data...." + JSON.stringify(res))
-  //   // this.arrays = { ...res }
-
-  //   console.log("Array...." + this.arrays)
-
-
-  // });
-
+  
 
 }
 
