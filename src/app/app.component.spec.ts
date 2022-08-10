@@ -1,16 +1,25 @@
 import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { ShipmentSummaryService } from './services/shipment-summary.service';
+import { ShipmentServicesService } from './services/shipment-services.service';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ],
       declarations: [
         AppComponent
+      
       ],
+      providers: [ShipmentSummaryService, ShipmentServicesService]
+     
     }).compileComponents();
   });
 
@@ -30,6 +39,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('shipmentSearch app is running!');
+    expect(compiled.querySelector('button')?.textContent).toContain('<--Back');
   });
 });
